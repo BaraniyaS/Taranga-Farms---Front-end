@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, inital-scale=1">
+  <title>Taranga Farms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="https://github.com/GirishKumar-technogeek/Taranga-Farms-Dev/blob/main/favicon.png?raw=true" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./single_product_style.css">
+  <link rel="stylesheet" href="navbarstyles.css">
+
+</head>
+<body>  
+  
+  <header id="navbar">
+    <nav class="navbar-container container">
+      <a href="#" class="home-link">
+        <div style="font-size: 22px;">Taranga Farms</div>
+      </a>
+      <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div id="navbar-menu" aria-labelledby="navbar-toggle">
+        <ul class="navbar-links">
+          <li class="navbar-item"><a class="navbar-link" href="#">Products</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#">Orders</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#">Cart</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<br><br><br> 
+<div class="small-container single-product">
+    <div class="row">
+      <div class="col-2">
+        <div class="hover01">
+        <figure><img src="images/Peanut Butter with Chia seeds.jpeg" alt="" width="100%" id="ProductImg" /></figure>
+      </div>
+    </div>
+      <div class="col-2">
+        <p class="p-home">Home / Items</p>
+        <h1>Peanut Butter with Chia seeds</h1>
+        <h4>₹550</h4>
+        <div class="row">
+        <select style="margin-right: 15px;">
+          <option selected value="0">Once</option>
+          <option value="1">Daily</option>
+          <option value="2">Weekly</option>
+          <option value="3">Monthly</option>
+        </select><br>
+        <div class="qty-container">
+        <div class="qty-input">
+          <button class="qty-count qty-count--minus" data-action="minus" type="button">-</button>
+          <input class="product-qty" type="number" name="product-qty" min="0" max="10" value="1">
+          <button class="qty-count qty-count--add" data-action="add" type="button">+</button>
+        </div>
+      </div>
+      </div><br> 
+        <a href="" class="btn-white"><img style="margin-right: 15px;" src="images/cart.svg" width="20px" height="20px">Add To Cart</a>
+        <a href="" class="btn"><img style="margin-right: 15px;" src="images/buy.svg" width="20px" height="20px">Buy now</a>    
+        <br><br><br>
+        <h3>Product Details <i class="fas fa-indent"></i></h3>
+        <br/>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias,
+          accusamus soluta quasi illum, desga velit odio sint officia
+          corrupti eum perspiciatis.
+        </p>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="">
+      <div class="col-sm-12 col-md-6" style="text-align: left;">
+        <h6 style="font-weight: normal;">Feedback</h6>
+        <p class="text-justify">"Clear feedback is the cornerstone of improvement" - Sir David Brailsford, Ineos Grenadiers<br>
+          We are ready to face brickbats as we are happy to receive bouquets. Please use the following means to reach us.</p>
+      </div>
+      <br>
+      <div class="col-sm-12 col-md-6" style="text-align: left;">
+        <h6 style="font-weight: normal;">Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="#">Landline</a></li>
+          <li><a href="#">Mobile</a></li>
+          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#">e-mail</a></li>
+          <li><a href="#">Snail Mail</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--<hr>-->
+  </div>
+  <br>
+  <!--<div class="container">
+    <div class="row">
+      <div class="copyright-text">
+        <p class="copyright-text">Copyright &copy;Taranga Farms</a>.
+        </p>
+      </div>
+    </div>
+  </div>-->
+</footer>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./script.js"></script>
+  <script src="single_product_script.js"></script>  
+  <script>
+    const navbarToggle = navbar.querySelector("#navbar-toggle");
+    const navbarMenu = document.querySelector("#navbar-menu");
+    const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
+    let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
+    
+    const toggleNavbarVisibility = () => {
+      isNavbarExpanded = !isNavbarExpanded;
+      navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
+    };
+    
+    navbarToggle.addEventListener("click", toggleNavbarVisibility);
+    
+    navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
+    navbarMenu.addEventListener("click", toggleNavbarVisibility);
+    
+    </script>
+</body>
+</html>
